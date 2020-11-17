@@ -3,8 +3,9 @@
 
 ## 1. Software Installation
 ### 1.1. Jetpack
-* 17 Nov. 2020
-** ddd
+#### * 17 Nov. 2020
+##### - ddef
+
 ### 1.2. APT packages
 ### 1.3. Performance Monitoring
 
