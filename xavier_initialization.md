@@ -63,6 +63,7 @@
 * Add "data-root" option in "/lib/systemd/system/docker.service" file
     * ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --data-root=__"your docker path"__
     * In my case, 
+        * mkdir -p ~/mount/containerd/
         * sudo su
         * sed -i '/ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock/ c ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --data-root=/home/nvidia/mount/containerd/' /lib/systemd/system/docker.service
         * exit
