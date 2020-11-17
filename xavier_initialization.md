@@ -55,7 +55,8 @@
 
 
 
-## 3. Modifications for Docker Environments
+## 3. Docker Configuration for Deep Learning
+### 3.1 Modifications for Docker Environments
 * Check docker version: sudo docker --version (Currently, 19.03)
 * Use docker command without sudo: sudo usermod -aG docker $USER, Reboot Required
 * Set mount directory: mkdir -p __"your docker path"__
@@ -67,8 +68,6 @@
     * sudo service docker start 
     * sudo service docker status 
 
-
-
-
-## 4. 
+### 3.2. Run Images and Containers
+* 
 
