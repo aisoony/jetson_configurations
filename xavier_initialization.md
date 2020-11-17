@@ -2,6 +2,8 @@
 * Jetson Xavier AGX 초기 설정방법 정리
 * 따라하다 실패해도 책임 안짐
 
+
+
 ## 1. Software Installation
 ### 1.1. Jetpack
 * Jetpack 4.4.1 (17 Nov. 2020)
@@ -24,7 +26,7 @@
     *
 
 * VPN Client for fixed IP
-    * sudo apt update && sudo apt install -y openvpn easy-rsa libnfnetlink0 iptables iputils* libssl-dev liblzo2-dev libpam0g-dev netcat sshpass
+    * sudo apt update && sudo apt install -y openvpn easy-rsa 
     * ls -al /usr/sbin/openvpn ==> Check existance of the binary file
     * Assume that __"your VPN client path"__==> __PPP__ and __"your VPN service name"__ ==> __SSS__
     * mkdir -p __PPP__
@@ -34,9 +36,11 @@
     * sudo systemctl start __SSS__
     * sudo systemctl status __SSS__
 
+
+
 ## 2. Mount External Storages
 ### 2.1. Disk Configuration
-* Must set ext4 if you want use docker images!
+* __Must__ set "ext4" partition if you want use docker images!
 * Check disk name: sudo fdisk -l
 * Check UUID and partition type: sudo blkid
 
@@ -44,7 +48,12 @@
 * Add disk properties to /etc/fstab
 * echo -e " UUID=__"your UUID"__ __"mount path"__ ext4 defaults 0 0" | sudo tee -a /etc/fstab > /dev/null
 
+
+
 ## 3. Modifications for Docker Environments
+
+
+
 
 ## 4. 
 
