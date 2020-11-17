@@ -65,6 +65,7 @@
     * In my case, 
         * sudo su
         * sed -i '/ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock/ c ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --data-root=/home/nvidia/mount/containerd/' /lib/systemd/system/docker.service
+        * exit
     * sudo systemctl daemon-reload 
     * sudo service docker stop 
     * sudo service docker start 
