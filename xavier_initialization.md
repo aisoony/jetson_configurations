@@ -25,12 +25,13 @@
 * VPN Client for fixed IP
     * sudo apt update && sudo apt install -y openvpn easy-rsa libnfnetlink0 iptables iputils* libssl-dev liblzo2-dev libpam0g-dev netcat sshpass
     * ls -al /usr/sbin/openvpn ==> Check existance of the binary file
-    * mkdir -p __"your VPN client path"__
-    * echo -e "[Unit]\nDescription=VPN Client\n[Service]\nType=simple\nUser=root\nExecStart=/usr/sbin/openvpn __"your VPN client path"__/client.conf\nWorkingDirectory=__"your VPN client path"__\nRestart=always\n[Install]\nWantedBy=multi-user.target" | sudo tee -a /etc/systemd/system/__"your VPN service name"__.service > /dev/null
+    * Assume that __"your VPN client path"__==> __PPP__ and __"your VPN service name"__ ==> __SSS__
+    * mkdir -p __PPP__
+    * echo -e "[Unit]\nDescription=VPN Client\n[Service]\nType=simple\nUser=root\nExecStart=/usr/sbin/openvpn __PPP__/client.conf\nWorkingDirectory=__PPP__\nRestart=always\n[Install]\nWantedBy=multi-user.target" | sudo tee -a /etc/systemd/system/__SSS__.service > /dev/null
     * sudo systemctl daemon-reload 
-    * sudo systemctl enable __"your VPN service name"__
-    * sudo systemctl start __"your VPN service name"__
-    * sudo systemctl status __"your VPN service name"__
+    * sudo systemctl enable __SSS__
+    * sudo systemctl start __SSS__
+    * sudo systemctl status __SSS__
     
 
 
